@@ -32,14 +32,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  static const platform = const MethodChannel('flutter.native/helper');
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  static const platform = MethodChannel('flutter.native/helper');
 
   Future<void> _responseFromNativeCode() async {
     if (Platform.isAndroid) {
@@ -50,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       }
     } else if (Platform.isIOS) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
           content: Text("Belum di Implement di iOS"),
         ),
       );
@@ -69,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ElevatedButton(
               onPressed: _responseFromNativeCode,
-              child: Text('Akses floating widget'),
+              child: const Text('Akses floating widget'),
             )
           ],
         ),
