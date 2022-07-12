@@ -1,6 +1,8 @@
 # Contoh Penggunaan Library
 
-A new Flutter project.
+Contoh implementasi penggunaan package BNI Floating Bubble (.aar) pada project Flutter.
+
+![screenshot](screenshot/screenshot.gif)
 
 ## Getting Started
 
